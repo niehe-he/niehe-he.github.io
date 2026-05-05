@@ -1,0 +1,30 @@
+- category: Languages
+  items:
+    - name: JavaScript / TypeScript
+      level: 90
+    - name: Python
+      level: 85
+    - name: Go
+      level: 70
+    - name: Java
+      level: 65
+
+- category: Frontend
+  items:
+    - name: React / Vue
+      level: 88
+    - name: HTML / CSS
+      level: 92
+    - name: Tailwind CSS
+      level: 85
+
+- category: Backend & Tools
+  items:
+    - name: Node.js
+      level: 85
+    - name: Docker
+      level: 75
+    - name: Git / GitHub
+      level: 90
+    - name: Linux
+      level: 78

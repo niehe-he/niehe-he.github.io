@@ -1,0 +1,28 @@
+---
+layout: default
+title: Home
+---
+
+{% include hero.html %}
+{% include skills.html %}
+{% include projects.html %}
+
+<section id="blog" class="section container">
+  <h2 class="section-title">Latest Posts</h2>
+  <div class="blog-list">
+    {% for post in site.posts limit:5 %}
+    <a href="{{ post.url | relative_url }}" class="blog-item">
+      <div class="post-date">{{ post.date | date: "%Y-%m-%d" }}</div>
+      <h3>{{ post.title }}</h3>
+      <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+    </a>
+    {% endfor %}
+    {% if site.posts.size == 0 %}
+    <div class="blog-item" style="cursor: default;">
+      <div class="post-date">Coming soon</div>
+      <h3>Stay tuned for technical articles</h3>
+      <p class="post-excerpt">Thoughts on web development, system design, and open source.</p>
+    </div>
+    {% endif %}
+  </div>
+</section>

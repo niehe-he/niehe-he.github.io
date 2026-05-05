@@ -1,0 +1,38 @@
+title: "niehe-he"
+description: "Crafting elegant code & beautiful experiences"
+baseurl: ""
+url: "https://niehe-he.github.io"
+github_username: niehe-he
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:title/
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  projects:
+    output: false
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      permalink: /blog/:title/
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - docker-compose.yml
+  - README.md
+  - vendor/

@@ -1,0 +1,27 @@
+- name: Project Alpha
+  description: "一个高性能的 API 网关，支持动态路由和限流"
+  url: https://github.com/niehe-he/project-alpha
+  stars: 128
+  language: TypeScript
+  color: "#3178c6"
+
+- name: Vue Dashboard
+  description: "精美的数据可视化仪表盘，支持实时数据更新"
+  url: https://github.com/niehe-he/vue-dashboard
+  stars: 89
+  language: Vue
+  color: "#4fc08d"
+
+- name: CLI Toolkit
+  description: "开发者的命令行工具箱，提升日常工作效率"
+  url: https://github.com/niehe-he/cli-toolkit
+  stars: 56
+  language: Go
+  color: "#00add8"
+
+- name: Blog Engine
+  description: "轻量级静态博客引擎，Markdown 驱动"
+  url: https://github.com/niehe-he/blog-engine
+  stars: 34
+  language: Python
+  color: "#3572a5"

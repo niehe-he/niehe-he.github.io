@@ -3,9 +3,61 @@ layout: default
 title: Home
 ---
 
-{% include hero.html %}
-{% include skills.html %}
-{% include projects.html %}
+<section id="about" class="hero container">
+  <div class="hero-avatar">N</div>
+  <h1>niehe-he</h1>
+  <p class="tagline">Full-Stack Developer &amp; Open Source Enthusiast</p>
+  <p>
+    <span id="typewriter" class="typewriter"
+      data-phrases='["Building elegant solutions.","Writing clean code.","Exploring new technologies.","Creating delightful UIs."]'>
+    </span>
+  </p>
+  <div class="hero-social">
+    <a href="https://github.com/{{ site.github_username }}" title="GitHub" target="_blank" rel="noopener">GH</a>
+    <a href="mailto:niehehe@example.com" title="Email">@</a>
+  </div>
+</section>
+
+<section id="skills" class="section container">
+  <h2 class="section-title">Skills &amp; Expertise</h2>
+  <div class="skills-grid">
+    {% for category in site.data.skills %}
+    <div class="skill-category">
+      <h3>{{ category.category }}</h3>
+      {% for skill in category.items %}
+      <div class="skill-item">
+        <div class="skill-info">
+          <span>{{ skill.name }}</span>
+          <span>{{ skill.level }}%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-fill" style="width: 0%" data-width="{{ skill.level }}%"></div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="projects" class="section container">
+  <h2 class="section-title">Featured Projects</h2>
+  <div class="projects-grid">
+    {% for project in site.data.projects %}
+    <a href="{{ project.url }}" class="project-card" target="_blank" rel="noopener">
+      <h3>{{ project.name }}</h3>
+      <p>{{ project.description }}</p>
+      <div class="project-meta">
+        <span class="project-lang">
+          <span class="project-lang-dot" style="background-color: {{ project.color }};"></span>
+          {{ project.language }}
+        </span>
+        <span class="project-stars">&#9733; {{ project.stars }}</span>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</section>
 
 <section id="blog" class="section container">
   <h2 class="section-title">Latest Posts</h2>
